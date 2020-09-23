@@ -7,10 +7,7 @@ body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
-ul{
-    list-style: none;
-    display: flex;
-}
+
 button{
     padding: 10px 15px;
     border-radius: 8px;
@@ -19,27 +16,66 @@ button{
     background: #f19b39;
     color: #fff;
 }
-li{
-    margin: 0 15px;
-}
-nav{
-    display: flex;
-    justify-content: space-between;
-    margin: auto 30px;
-}
-nav p{
-    font-weight: bold;
-}
 header{
     height: calc(100vh - 150px);
     background:no-repeat center/cover url('assets/header-image.jpg');
 }
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 30px;
+}
+header nav p{
+    font-weight: bold;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    margin: 0 15px;
+}
+
 .header-content{
     max-width: 400px;
     margin: 150px auto;
     text-align: center;
 }
+   
 .header-content h1{
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 4rem;
+   margin-bottom: 10px;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width:480px) {
+    body {
+        height: calc(100vh - 55px);
+    }
+    header nav ul{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        background: #1d61dd;
+        color: #fff;
+        font-weight: bold;
+        height: 55px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav p{
+        width: 100%;
+        text-align: center;
+    }
 }

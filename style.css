@@ -129,6 +129,63 @@ header nav ul li{
     font-weight: bold;
 }
 
+.serviços{
+    padding: 15px;
+}
+
+.serviços .serviços-title{
+    text-align: center;
+    margin: 35px 0;
+}
+
+.serviços .serviços-cards{
+    display: flex;
+    max-width: 950px;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+
+}
+
+.serviços .card{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+
+}
+.serviços .card svg{
+    width: 60px;
+    height: 60px;
+    margin: 50px 0;
+    transition: all 250ms;
+}
+
+.serviços .card svg:hover{
+    stroke: #1d61dd;
+    transform: scale(1.1);
+}
+
+.serviços .card h3{
+    font-weight: bold;
+}
+.serviços .card p{
+    color: gray;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.serviços .card .card-content{
+    height: 180px;
+    text-align: center;
+}
+.serviços button{
+    background: #1d61dd;
+}
+
+
 /*RESPONSIVE*/
 
 @media (max-width: 767px) {

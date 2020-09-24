@@ -12,21 +12,21 @@
             <nav>
                <p>LG Viagens</p>
                 <ul>
-                    <li>Home</li>
-                    <li>Pacotes</li>
-                    <li>Serviços</li>
-                    <li>Contanto</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pacotes">Pacotes</a></li>
+                    <li><a href="#serviços">Serviços</a></li>
+                    <li><a href="#contato">Contanto</a></li>
                 </ul>
             </nav>
 
-            <div class="header-content">
+            <div id="home" class="header-content">
                 <h1>London</h1>
                 <p>Conheça a antiga Londres,uma cidade historica e bela.O embarque está proximo,aproveite essa experiência!</p>
                 <button>Saiba Mais</button>
             </div>
         </header>
 
-        <section class="pacotes">
+        <section id="pacotes" class="pacotes">
 
             <h1 class="pacotes-title">Conheça nossos pacotes</h1>
             
@@ -89,7 +89,7 @@
             </div>
         </section>
 
-        <section class="serviços">
+        <section id="serviços" class="serviços">
             <h1 class="serviços-title">Serviços</h1>
 
             <div class="serviços-cards">
@@ -123,7 +123,7 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section id="contato" class="contato">
             <div class="contato-card">
                 <h1>Entre em contato</h1>
                 <ul>
@@ -137,6 +137,16 @@
 
         <script>
             feather.replace()
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
             function initMap() {
   // The location of Uluru
